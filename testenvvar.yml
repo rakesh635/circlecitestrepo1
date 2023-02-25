@@ -1,4 +1,4 @@
 envvariables:
   branch: 'itsmemasterbranch'
   env: 'itsproduction'
-  test: 'test dev branch'
+  a1: 'a1'
