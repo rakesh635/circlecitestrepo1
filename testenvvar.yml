@@ -1,2 +1,3 @@
 envvariables:
-  branch: itsmemasterbranch
+  branch: 'itsmemasterbranch'
+  env: 'itsproduction'
