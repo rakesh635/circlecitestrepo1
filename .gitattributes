@@ -1,1 +1,1 @@
-testenvvar.yml merge=ours
+*.yml merge=ours
