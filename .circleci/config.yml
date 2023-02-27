@@ -22,14 +22,14 @@ jobs:
           command: |
             if [[ $CIRCLE_BRANCH == "main" ]] ; then
               # echo "export WEBSITE_URL=$PROD_WEBSITE_URL" >> $BASH_ENV
-              echo "export FINALNUMBER=$PROD_NUMB" >> $BASH_ENV
+              echo "export FIREBASEID=$PROD_NUMB" >> $BASH_ENV
             else
                # echo "export WEBSITE_URL=$DEV_WEBSITE_URL" >> $BASH_ENV
-              echo "export FINALNUMBER=$DEV_NUMB" >> $BASH_ENV
+              echo "export FIREBASEID=$DEV_NUMB" >> $BASH_ENV
             fi
             source $BASH_ENV
             # echo "$WEBSITE_URL"
-            sum=$(( $FINALNUMBER + 10 ))
+            sum=$(( $FIREBASEID + 10 ))
             echo "-- $sum --"
             
 # Invoke jobs via workflows
