@@ -21,12 +21,17 @@ jobs:
           name: 'Setup Environment Variables'
           command: |
             if [[ $CIRCLE_BRANCH == "main" ]] ; then
-              echo "export WEBSITE_URL=$PROD_WEBSITE_URL" >> $BASH_ENV
+              # echo "export WEBSITE_URL=$PROD_WEBSITE_URL" >> $BASH_ENV
+              echo "export FINALNUMBER=$PROD_NUMB" >> $BASH_ENV
             else
-              echo "export WEBSITE_URL=$DEV_WEBSITE_URL" >> $BASH_ENV
+               # echo "export WEBSITE_URL=$DEV_WEBSITE_URL" >> $BASH_ENV
+              echo "export FINALNUMBER=$DEV_NUMB" >> $BASH_ENV
             fi
             source $BASH_ENV
-            echo "++ $WEBSITE_URL ++"
+            # echo "$WEBSITE_URL"
+            sum=$(( $FINALNUMBER + 10 ))
+            Echo ">> $sum <<"
+            
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
