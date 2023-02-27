@@ -1,5 +1,5 @@
 envvariables:
   branch: 'itsmemasterbranch'
   env: 'itsproduction'
-  a3: 'a5555'
+  a3: 'a3'
   a5: 'a5'
